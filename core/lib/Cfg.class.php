@@ -13,7 +13,7 @@ class Cfg {
     }
 
     static function add($cfg) {
-        self::$cfg += $cfg;
+        self::$cfg = $cfg + self::$cfg;
     }
 
 }
