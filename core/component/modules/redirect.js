@@ -15,12 +15,12 @@ $(function () {
         data.find('[name=field_value_]').attr('name', 'field_value[]');
         data.find('[name=value_desc_]').attr('name', 'value_desc[]');
         data.find('[name=position_]').attr('name', 'position[]');
-        $('#redirect-form table tbody').append(data.show());
+        $('#redirect-form table.t tbody').append(data.show());
         return false;
     });
 
     $('#redirect-form').on('click', '.del', function () {
-        var data = $(this).parents('tr').remove();
+         $(this).parents('tr').remove();
         return false;
     });
     $('.remove').click(function () {

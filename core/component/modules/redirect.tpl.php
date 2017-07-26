@@ -1,5 +1,5 @@
 <form id="redirect-form" class="admin-form" method="POST" action="?act=saveRedirect">
-    <table>
+    <table class="t">
         <thead>
             <tr>
                 <th>Старый урл</th>
