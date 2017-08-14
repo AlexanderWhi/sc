@@ -68,7 +68,8 @@ function toUtf(&$item, $key) {
 }
 
 function fromUtf(&$item, $key) {
-    $item = iconv('utf-8', 'windows-1251', $item);
+    //$item = iconv('utf-8', 'windows-1251', $item);
+    $item=mb_convert_encoding($item, "windows-1251", "utf-8");
     if (get_magic_quotes_gpc()) {
         $item = stripslashes($item);
     }
@@ -170,7 +171,8 @@ function fdte1($date) {
 }
 
 function u2w($s) {
-    return @iconv('utf-8', 'windows-1251', (string) $s);
+    return $item=mb_convert_encoding((string) $s, "windows-1251", "utf-8");
+//    return @iconv('utf-8', 'windows-1251', (string) $s);
 }
 
 function w2u($s) {
